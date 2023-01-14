@@ -1,0 +1,66 @@
+ion-content{
+    --background: rgb(43, 3, 3) ;
+  }
+  ion-slides{
+    background-color: rgb(82, 27, 0);
+    height: 100%;
+    max-width: 800px;
+    margin: 5px 5px 5px 5px;
+    --bullet-background-active: red ;
+  }
+  .swiper-slide{
+    display: block;
+    background-color: var(--ion-micolor-fondoslide);
+    padding: 20px 0px 20px 0px;
+    margin: 5px 5px 5px 5px;
+  }
+  .slide1-titulo1{
+    color:var(--ion-micolor-titulos);
+    padding: 30px 10px 10px 10px;
+    font-family: 'gabardina';
+  }
+  .slide1-titulo2{
+    color:var(--ion-micolor-titulos);
+    padding: 30px 10px 10px 10px;
+    font-family: 'TituloHarry';
+  }
+  .slide1-titulo3{
+    color:var(--ion-micolor-titulos);
+    padding: 30px 10px 10px 10px;
+    font-family: 'Titulo3';
+  }
+  .slide1-titulo4{
+    color:var(--ion-micolor-titulos);
+    padding: 30px 10px 0px 10px;
+    font-family: 'Titulo4';
+  }
+  .slide1-subtitulo{
+    color:var(--ion-micolor-titulos);
+    padding: 0px 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Titulo4';
+  }
+  ion-slide > p {
+    font-style: normal;
+    text-align: justify;
+    font-size: 14px;
+    margin: 20px 10px 20px 10px;
+    color:var(--ion-micolor-sinopsis) ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: rgb(32, 20, 20);  
+    padding: 10px 10px 10px 10px;
+    border:inset;
+    
+  }
+  ion-slide > ion-icon[name = "close-circle-outline"]{
+    float: right;
+    color:var(--ion-micolor-close);
+    font-size: 35px;
+  }
+  .imagenslide1{
+    height: 250px;
+    margin: 10px 0px 10px 0px;
+    border-image: stretch;
+    
+  }
+  

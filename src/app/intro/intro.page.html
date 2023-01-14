@@ -1,0 +1,19 @@
+
+
+<ion-content>
+  <ion-virtual-scroll>
+    
+  </ion-virtual-scroll>
+  <ion-slides pager = "true" [options]="slideOpt">
+
+    <ion-slide *ngFor="let slide of slides">
+      <ion-icon name="close-circle-outline" (click)="finish()"></ion-icon>
+      <h1 class="slide1-titulo1">{{slide.title}}</h1>
+      <img class="imagenslide1" src="{{slide.img}}">
+      <p>
+        {{slide.descripcion}}
+      </p>
+    </ion-slide>
+    
+  </ion-slides>  
+</ion-content>
