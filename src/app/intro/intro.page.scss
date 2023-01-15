@@ -1,18 +1,20 @@
 ion-content{
     --background: rgb(43, 3, 3) ;
+    margin: 5px 5px 5px 5px;
   }
   ion-slides{
     background-color: rgb(82, 27, 0);
     height: 100%;
     max-width: 800px;
-    margin: 5px 5px 5px 5px;
-    --bullet-background-active: red ;
+    
+    margin: 0px 10px 0px 10px;
+    --bullet-background-active: rgb(11, 138, 133) ;
   }
   .swiper-slide{
     display: block;
     background-color: var(--ion-micolor-fondoslide);
-    padding: 20px 0px 20px 0px;
-    margin: 5px 5px 5px 5px;
+    padding: 20px 10px 20px 10px;
+    
   }
   .slide1-titulo1{
     color:var(--ion-micolor-titulos);
@@ -22,7 +24,7 @@ ion-content{
   .slide1-titulo2{
     color:var(--ion-micolor-titulos);
     padding: 30px 10px 10px 10px;
-    font-family: 'TituloHarry';
+    font-family: 'Titulo3';
   }
   .slide1-titulo3{
     color:var(--ion-micolor-titulos);
