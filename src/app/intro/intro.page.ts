@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-intro',
@@ -35,8 +36,11 @@ export class IntroPage implements OnInit {
       descripcion: "Esta novela narra la historia detrás del exitoso videojuego Assassin's Creed." 
     }
   ]
-  constructor(private router: Router) { }
+  constructor(private router: Router, private storage: Storage) {
+    
+   }
   finish(){
+    this.storage.set("isIntroShowed", true);
     this.router.navigateByUrl("/home");
   }
 

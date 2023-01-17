@@ -8,12 +8,14 @@ import { IntroPageRoutingModule } from './intro-routing.module';
 
 import { IntroPage } from './intro.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     IntroPageRoutingModule
+    
   ],
   declarations: [IntroPage]
 })
