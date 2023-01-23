@@ -1,0 +1,83 @@
+<head>
+  <meta charset="UTF-8">
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" >
+
+</head>
+<ion-content class="screen" >
+  
+  <div class="screen">
+    <figure class="size-logo">
+      <img src="./assets/logo.png" />
+    </figure>
+    <ion-text class="ion-text-center text" aria-setsize="50px">
+      <h3>LOGIN</h3>
+    </ion-text>
+    
+    <form class="screen-1" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+      <div class="email">
+        <label >Email</label>
+        <ion-item  fill="solid">        
+          <div >
+            <ion-input formControlName="email" placeholder="Username@gmail.com">
+              <ion-icon name="mail-outline"></ion-icon>
+            </ion-input>
+          </div>
+          
+        </ion-item >
+      </div>
+      
+      <div>
+        <ng-container *ngFor="let validation of validation_message.email">
+          <div *ngIf="
+          loginForm.get('email')?.hasError(validation.type) && 
+          (loginForm.get('email')?.dirty || 
+          loginForm.get('email')?.touched) ">
+            {{validation.message}}
+          </div>
+          
+        </ng-container>
+      </div>
+      <div class="password">
+        <label >Password</label>
+        <ion-item  fill="solid">
+          
+          <div >
+            <ion-input class="pas"  type="password" formControlName="password" placeholder="············">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </ion-input>
+          </div>
+          
+        </ion-item>
+      </div>
+      
+      <div>
+        <ng-container *ngFor="let validation of validation_message.password">
+          <div *ngIf="
+          loginForm.get('password')?.hasError(validation.type) && 
+          (loginForm.get('password')?.dirty || 
+          loginForm.get('password')?.touched) ">
+            {{validation.message}}
+          </div>
+          
+        </ng-container>
+      </div>
+      <ion-button color="danger" 
+      expand="block"
+      shape="round"
+      [disabled]="!loginForm.valid">
+        Login
+      </ion-button>
+      <ion-button color="danger" 
+      expand="block"
+      shape="round"
+      (click)="goToRegister()">
+        Registrar
+      </ion-button>
+    </form>
+    {{errorMessage}}
+  </div>
+  
+</ion-content>

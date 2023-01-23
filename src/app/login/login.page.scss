@@ -1,0 +1,105 @@
+$p: rgb(38, 3, 3);
+$s: hsl(233deg 36% 38%);
+
+* { font-family: 'Poppins'
+}
+.screen {
+	background: $p;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 30px;
+  margin: 10px 0px 30px 0px;
+	box-shadow: 0 0 2em hsl(231deg 62% 94%);
+}
+.body{
+	user-select: none;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: hsl(218deg 50% 91%);
+	height: 100vh;
+}
+.size-logo{
+  max-width:150px;
+  margin: 0 auto;
+  display:flex;
+}
+.text{
+  color: rgb(255, 255, 255);
+  
+  
+}
+.screen-1 {
+	
+	gap: 2em;
+	.logo { margin-top: -3em }
+	.email {
+		background: hsl(0deg 0% 100%);
+		
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: 15px;
+		ion-input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+		}
+		ion-icon {
+			color: rgb(255, 255, 255);
+			margin-bottom: -.2em;
+      margin-right: 20px;
+		}
+	}
+	.password {
+		background: hsl(0deg 0% 100%);
+		margin-top: 20px;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		ion-input {
+			
+			
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+        
+			}
+		}
+		ion-icon {
+			color: rgb(255, 255, 255);
+			margin-bottom: -.2em;
+      margin-right: 20px;
+		}
+		.show-hide {
+			margin-right: -5em;
+		}
+	}
+	.login {
+		padding: 1em;
+		background: hsl(233deg 36% 38%);
+		color: hsl(0 0 100);
+		border: none;
+		border-radius: 30px;
+		font-weight: 600;
+	}
+  ion-button{
+    margin-top: 10px;
+    
+  }
+	
+}
+
+
+button { cursor: pointer; }
