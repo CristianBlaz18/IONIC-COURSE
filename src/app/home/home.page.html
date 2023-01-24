@@ -7,5 +7,13 @@
 </ion-header>
 <ion-content>
     <p class="ion-text-center ion-text-uppercase">Hola soy el home</p>
+    <ion-slides [options]="slideOps">
+        <ion-slide *ngFor="let author of authors">
+            <ion-avatar>
+                <img src="{{author.avatar}}"/>
+                <span>{{author.first_name}}</span>
+            </ion-avatar>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
 

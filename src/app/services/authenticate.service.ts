@@ -21,7 +21,7 @@ export class AuthenticateService {
     let usuarioreg = await this.storage.get('user');
     
     return new Promise((accept, reject) =>{
-      if ( credentials.email == usuarioreg.email && credentials.password == atob(usuarioreg.password) )
+      if ( credentials.email == usuarioreg.email && credentials.password == atob(usuarioreg.password) ) 
       {
         accept("Login Exitoso");
       } else {
