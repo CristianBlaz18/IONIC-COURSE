@@ -1,0 +1,37 @@
+ion-button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+  }
+  .title{
+    margin:10px 0px 10px 0px;
+    
+  }
+ div{
+    height: 250px;
+ }
+  img{
+    display: block;
+    height: 200px;
+    margin-left: 90px;
+    margin-top: 15px;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+  }
+.nombre{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+ion-item{
+    max-height: 400px;
+  margin-top: 20px;
+    padding: 0px 20px 0px 20px;
+    --background:var(--ion-micolor-fondocontent)
+  }
+  
+  ion-list{
+    
+    --background:var(--ion-micolor-fondocontent)
+  }

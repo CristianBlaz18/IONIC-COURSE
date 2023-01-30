@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
 import { Storage } from '@ionic/storage';
 
@@ -27,7 +27,8 @@ export class LoginPage implements OnInit {
   constructor(private formBuilder: FormBuilder , 
     private authenticate: AuthenticateService,
     private navCtrol: NavController,
-    private storage:Storage
+    private storage:Storage,
+    private alertController: AlertController
     ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
@@ -50,9 +51,9 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  loginUser(credentials: any){
+  loginUserLocal(credentials: any){
     console.log(credentials);
-    this.authenticate.loginUser(credentials).then(res=>{
+    this.authenticate.loginUserLocal(credentials).then(res=>{
       this.errorMessage= "";
       this.storage.set("isUserLoggedIn",true)
       this.navCtrol.navigateForward("/menu/home")
@@ -62,6 +63,30 @@ export class LoginPage implements OnInit {
   }
   goToRegister(){
     this.navCtrol.navigateForward("/register")
+  }
+  loginUser(credentials: any){
+    console.log(credentials);
+    this.authenticate.loginUser(credentials).then((res:any)=>{
+      this.storage.set("isUserLoggedIn",true);
+      this.storage.set("user_id",res.user.id)
+      this.storage.set("user",res.user)
+      this.navCtrol.navigateForward("/menu/home")
+    }).catch(err =>{
+      this.errorMessage = err
+      this.presentAlert("Opps", "Hubo un error", err);
+    });
+  }
+  
+  async presentAlert(header: any, subHeader:any, message:any){
+    const alert = await this.alertController.create(
+      {
+        header: header,
+        subHeader : subHeader,
+        message: message,
+        buttons: ['OK']
+      }
+    );
+    await alert.present(); 
   }
 
 }

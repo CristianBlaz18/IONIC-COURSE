@@ -1,4 +1,24 @@
 ion-avatar{
     height: 150px;
-    width: 100px;
+    width: 100%;
+    //--border-radius: 0;
+    
 }
+ion-avatar img {
+    width: 90px;
+    height: 90px;
+    
+}
+ion-grid{
+    margin-top: 50px;
+}
+ion-slides{
+    margin-top: 50px;
+}
+ion-card{
+    background-color: var(--ion-micolor-fondocontent);
+}
+ion-content{
+    --background:var( --ion-micolor-fondoapp) ;
+    
+  }

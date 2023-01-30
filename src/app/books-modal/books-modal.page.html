@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button 
+      shape="round"
+      fill="outline"
+      color="danger"
+      (click)="closeModal()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+        CERRAR
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center title">{{author.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-card *ngFor="let book of books">
+    <img  src="{{book.cover}}" />
+    <ion-card-header>
+      <ion-card-title>{{book.name}}</ion-card-title>
+      
+    </ion-card-header>
+  </ion-card>-->
+  <ion-list lines="inset"  *ngFor="let book of books">
+    <ion-item>
+      <div>
+        
+        <img src="{{book.cover}}"/>
+        <div class="nombre">
+          <span >{{book.name}}</span>
+        </div>    
+      </div>  
+      
+   </ion-item>
+</ion-list>
+
+</ion-content>
+

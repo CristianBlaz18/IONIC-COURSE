@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title >
+      <ion-icon name="options-outline" class="ion-margin-end"></ion-icon>Top 10 Libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-card *ngFor ="let book of books" >
+    <img alt="Silhouette of mountains" src="{{book.cover}}" />
+    <ion-card-header>
+      <ion-card-title >
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-text-center">Nombre: </ion-col>
+            <ion-col class="ion-text-center">Likes:</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-text-center">{{book.name}}</ion-col>
+            
+            <ion-col class="ion-text-center">
+              <ion-icon  class="ion-margin-end" name="happy-outline"></ion-icon>{{book.likes}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-title>
+      
+    </ion-card-header>
+  </ion-card>
+  
+</ion-content>
