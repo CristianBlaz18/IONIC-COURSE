@@ -12,11 +12,12 @@
 </ion-header>
 
 <ion-content class="fondo">
-  <ion-card *ngFor ="let book of books" >
-    <img alt="Silhouette of mountains" src="{{book.cover}}" />
-    <ion-card-header>
+  <ion-card *ngFor ="let book of books;let i=index" >
+    
+    <ion-card-header *ngIf="i<10">
+      <img alt="Silhouette of mountains" src="{{book.cover}}" />
       <ion-card-title >
-        <ion-grid>
+        <ion-grid >
           <ion-row>
             <ion-col class="ion-text-center">Nombre: </ion-col>
             <ion-col class="ion-text-center">Likes:</ion-col>
